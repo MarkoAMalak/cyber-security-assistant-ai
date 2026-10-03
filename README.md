@@ -1,5 +1,7 @@
 # 🔐 Cyber Security Assistant AI
 
+[![CI](https://github.com/MarkoAMalak/cyber-security-assistant-ai/actions/workflows/ci.yml/badge.svg)](https://github.com/MarkoAMalak/cyber-security-assistant-ai/actions/workflows/ci.yml)
+
 An AI-powered chat assistant for **cyber threat awareness and security guidance**,
 built with Gradio and served by LLMs through the Groq API.
 
@@ -30,6 +32,19 @@ Open http://localhost:7860.
 Create a Gradio Space, upload `app.py` and `requirements.txt`, and add
 `GROQ_API_KEY` under **Settings → Variables and secrets**.
 
+## Tests
+
+```bash
+pip install pytest
+python -m pytest -q
+```
+
+CI runs lint (ruff), the tests, a dependency audit (pip-audit) and a start-up check on every push.
+
 ## Tech stack
 
 Python · Gradio · Groq API · Llama 3
+
+## Author
+
+Marko A. Malak · [MIT License](LICENSE)

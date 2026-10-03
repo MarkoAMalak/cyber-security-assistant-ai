@@ -60,7 +60,6 @@ def respond(message, history, model, temperature, max_tokens):
 
 demo = gr.ChatInterface(
     fn=respond,
-    type="messages",
     title="🔐 Cyber Security Assistant AI",
     description="Ask questions about cyber threats, security best practices, and protection strategies.",
     additional_inputs=[
@@ -76,8 +75,9 @@ demo = gr.ChatInterface(
         ["Explain ransomware attacks and mitigation strategies"],
         ["What are best practices for securing a corporate network?"],
     ],
-    theme="soft",
+
 )
 
 if __name__ == "__main__":
-    demo.launch(server_name="0.0.0.0", server_port=int(os.environ.get("PORT", 7860)))
+    demo.launch(server_name="0.0.0.0", server_port=int(os.environ.get("PORT", "7860")),
+                theme="soft")
